@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEP_2-2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>STEP2-2</h1>
+    <input type="text" id="answer" placeholder="答えを入力" />
+    <div class="button" onclick="checkAnswer()">送信</div>
+    <a href="hint2.html" class="button" target="_blank" rel="noopner">ヒント</a>
+
+    <style>
+
+    </style>
+    <script>
+        function checkAnswer() {
+            const userAnswer = document.getElementById("answer").value.trim();
+            const validAnswers = ["あけた", "開けた"];
+            if (validAnswers.includes(userAnswer)) {
+                window.location.href = "step3.html"
+            } else {
+                alert('答えが違います。');
+            }
+        }
+    </script>
+</body>
+
+</html>

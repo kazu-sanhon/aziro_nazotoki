@@ -1,0 +1,29 @@
+body {
+    background-color: #b4c8ff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.button {
+    height: 30px;
+    width: 200px;
+    border: solid black 1px;
+    margin: 15px auto 0;
+    background-color: #668ad8;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+input {
+    height: 30px;
+    width: 200px;
+}
