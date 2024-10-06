@@ -2,13 +2,86 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>謎解き</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>１ヒント</h1>
+    <div class="accordion">
+        <div class="accordion-item">
+            <button class="accordion-button">セクション 1</button>
+            <div class="accordion-content">
+                <p>セクション 1 の内容です。</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-button">セクション 2</button>
+            <div class="accordion-content">
+                <p>セクション 2 の内容です。</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-button">セクション 3</button>
+            <div class="accordion-content">
+                <p>セクション 3 の内容です。</p>
+            </div>
+        </div>
+    </div>
+    <style>
+        .accordion-item {
+            max-width: 500px;
+            width: 80%;
+            margin: 0 auto 10px;
+        }
+
+        .accordion-button {
+            background-color: #2c9cc7;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .accordion-content {
+            padding: 0 10px;
+            background-color: #f1f1f1;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border-radius: 5px;
+        }
+
+        .accordion-content p {
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+
+                // If the content is closed, open it
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+
+    </script>
+
 </body>
 
 </html>
