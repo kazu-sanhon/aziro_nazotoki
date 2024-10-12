@@ -9,14 +9,15 @@
 </head>
 
 <body>
-    <h1>STEP3</h1>
-    <input type="text" id="answer" placeholder="答えを入力" />
-    <div class="button" onclick="checkAnswer()">送信</div>
-    <a href="hint3.html" class="button" target="_blank" rel="noopner">ヒント</a>
+    <div class="img"><img src="img/STEP3.jpg" alt="STEP3"></div>
+    <div class="section">
+        <input type="text" id="answer" placeholder="答えを入力" />
+        <div class="button" onclick="checkAnswer()"><img src="img/send.png" class="button_img" alt="送信"></div>
+        <a href="hint3.html" class="button" target="_blank" rel="noopner">
+            <img src="img/hint.png" class="button_img" alt="ヒント">
+        </a>
+    </div>
 
-    <style>
-
-    </style>
     <script>
         function checkAnswer() {
             const userAnswer = document.getElementById("answer").value.trim();
