@@ -2,68 +2,68 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>謎解き</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width" />
+    <title>LAST-STEPヒント</title>
+    <link rel="stylesheet" href="hint.css">
 </head>
 
 <body>
-    <h1>ラストヒント</h1>
-    <div class="accordion">
+    <h1>LAST-STEPヒント</h1>
+    <div class="accordions">
         <div class="accordion-item">
-            <button class="accordion-button">セクション 1</button>
-            <div class="accordion-content">
-                <p>セクション 1 の内容です。</p>
+            <button class="accordion-button">ヒント1</button>
+            <div class="accordion-inner-content">
+                <p>まずはハンバーガーを３つ作る方法を考えよう。ハンバーガーの具材をどこかで目にしていたはずだ。</p>
             </div>
         </div>
 
         <div class="accordion-item">
-            <button class="accordion-button">セクション 2</button>
-            <div class="accordion-content">
-                <p>セクション 2 の内容です。</p>
+            <button class="accordion-button">ヒント2</button>
+            <div class="accordion-inner-content">
+                <p>金庫の中から手に入れた紙に、ハンバーガーの具材があった。紙を半分に折ることで、ハンバーガーを３つ作ることが出来る。</p>
             </div>
         </div>
 
         <div class="accordion-item">
-            <button class="accordion-button">セクション 3</button>
-            <div class="accordion-content">
-                <p>セクション 3 の内容です。</p>
+            <button class="accordion-button">ヒント3</button>
+            <div class="accordion-inner-content">
+                <p>次はハンバーガーをお皿にのせる方法を考えよう。お皿は冊子の１ページと６ページにあった。大きさも正しく対応するようにハンバーガーをのせよう。</p>
             </div>
         </div>
+
+        <div class="accordion-item">
+            <button class="accordion-button">ヒント4</button>
+            <div class="accordion-inner-content">
+                <p>そのままではハンバーガーをうまくお皿にのせられない。折った紙を、冊子の間に挟みこむことできれいにお皿の上にのせよう。</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">ヒント5</button>
+            <div class="accordion-inner-content">
+                <p>正しくハンバーガーをお皿にのせると、矢印は「にじの間」を指す。２つの「にじ」の間を右から順に読んだものが最後の答えだ。</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">ヒント6</button>
+            <div class="accordion-inner-content">
+                <p>２つの「にじ」は冊子の１ページにあある。</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">ヒント7</button>
+            <div class="accordion-inner-content">
+                <p>冊子の１ページにある「虹」と「２時」の間を右から順に読もう。</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">最後の答え</button>
+            <div class="accordion-inner-content">
+                <p>答えは「つながり」だ。WEBに入力しよう。</p>
+            </div>
+        </div>
+
     </div>
-    <style>
-        .accordion-item {
-            max-width: 500px;
-            width: 80%;
-            margin: 0 auto 10px;
-        }
 
-        .accordion-button {
-            background-color: #2c9cc7;
-            color: white;
-            padding: 10px;
-            width: 100%;
-            text-align: center;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-
-        .accordion-content {
-            padding: 0 10px;
-            background-color: #f1f1f1;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-            border-radius: 5px;
-        }
-
-        .accordion-content p {
-            margin: 10px 0;
-        }
-    </style>
     <script>
         const accordionButtons = document.querySelectorAll('.accordion-button');
 
@@ -71,15 +71,18 @@
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
 
-                // If the content is closed, open it
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
                 } else {
                     content.style.maxHeight = content.scrollHeight + "px";
+
+                    const parentContent = button.closest('.accordion-content');
+                    if (parentContent) {
+                        parentContent.style.maxHeight = parentContent.scrollHeight + content.scrollHeight + "px";
+                    }
                 }
             });
         });
-
     </script>
 
 </body>

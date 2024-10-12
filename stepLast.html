@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
-    <title>STEP_2-2</title>
+    <title>LAST_STEP</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="img"><img src="img/STEP2-2.jpg" alt="STEP_2-2"></div>
+    <div class="img"><img src="img/LAST-STEP.jpg" alt="LAST-STEP"></div>
     <div class="section">
         <input type="text" id="answer" placeholder="答えを入力" />
         <div class="button" onclick="checkAnswer()"><img src="img/send.png" class="button_img" alt="送信"></div>
-        <a href="hint2.html" class="button" target="_blank" rel="noopner">
+        <a href="hint4.html" class="button" target="_blank" rel="noopner">
             <img src="img/hint.png" class="button_img" alt="ヒント">
         </a>
     </div>
@@ -21,9 +21,9 @@
     <script>
         function checkAnswer() {
             const userAnswer = document.getElementById("answer").value.trim();
-            const validAnswers = ["あけた", "開けた", "アケタ", "ひらけた", "ヒラケタ"];
+            const validAnswers = ["つながり", "ツナガリ", "繋がり"];
             if (validAnswers.includes(userAnswer)) {
-                window.location.href = "step3.html"
+                window.location.href = "clear.html"
             } else {
                 alert('答えが違います。');
             }

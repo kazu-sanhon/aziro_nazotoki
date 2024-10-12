@@ -1,0 +1,155 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>STEP4ヒント</title>
+    <link rel="stylesheet" href="hint.css">
+</head>
+
+<body>
+    <h1>STEP4ヒント</h1>
+    <div class="accordions">
+        <div class="accordion-item">
+            <button class="accordion-button">まず何をすれば良いかが分からない</button>
+            <div class="accordion-inner-content">
+                <p>まずはWEBの指示に従い、AJIRO MUSUBIから出て網代を歩き回ろう。途中で見つけたものを使い、WEB上に表示される謎を解こう。</p>
+            </div>
+        </div>
+
+        <!-- A -->
+        <div class="accordion-item">
+            <button class="accordion-button">１つ目の謎</button>
+            <div class="accordion-content">
+                <div class="accordion-item">
+                    <button class="accordion-button">１つ目の謎のヒント1</button>
+                    <div class="accordion-inner-content">
+                        <p>お店のひさしに書かれたイラストは「はさみ」のイラストだ。「はさみ」をあてはめて考えよう。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-button">１つ目の謎のヒント2</button>
+                    <div class="accordion-inner-content">
+                        <p>「はさみ」と「ピストル」はどちらも体の一部を使って表現できるはずだ。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-button">１つ目の謎のヒント3</button>
+                    <div class="accordion-inner-content">
+                        <p>数字は、手を使って表現した時に伸ばす指を表している。人差し指と小指だけを伸ばして表せる動物が答えだ。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-button">１つ目の謎の答え</button>
+                    <div class="accordion-inner-content">
+                        <p>答えは「きつね」だ。WEBに入力しよう。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- B -->
+        <div class="accordion-item">
+            <button class="accordion-button">２つ目の謎</button>
+            <div class="accordion-content">
+                <div class="accordion-item">
+                    <button class="accordion-button">２つ目の謎のヒント1</button>
+                    <div class="accordion-inner-content">
+                        <p>➀には「和」、②には「丸」が当てはまる。「和」と「丸」の間を読もう。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-button">２つ目の謎のヒント2</button>
+                    <div class="accordion-inner-content">
+                        <p>「和」と「丸」の間を読むと「ほしの間読め」となる。この盤面の中で「星」の間を読もう。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-button">２つ目の謎のヒント3</button>
+                    <div class="accordion-inner-content">
+                        <p>「星」の漢字を上下に分解した、「日」と「生」の間を読もう。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-button">２つ目の謎の答え</button>
+                    <div class="accordion-inner-content">
+                        <p>答えは「ほたる」だ。WEBに入力しよう。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- C -->
+        <div class="accordion-item">
+            <button class="accordion-button">３つ目の謎</button>
+            <div class="accordion-content">
+                <div class="accordion-item">
+                    <button class="accordion-button">３つ目の謎のヒント</button>
+                    <div class="accordion-inner-content">
+                        <p>反対側の道にある干物店の看板は手前から順に、赤色、緑色、黄色だ。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-button">３つ目の謎の答え</button>
+                    <div class="accordion-inner-content">
+                        <p>答えは「にぎり」だ。WEBに入力しよう。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- D -->
+        <div class="accordion-item">
+            <button class="accordion-button">４つ目の謎</button>
+            <div class="accordion-content">
+                <div class="accordion-item">
+                    <button class="accordion-button">４つ目の謎のヒント</button>
+                    <div class="accordion-inner-content">
+                        <p>WEB上の図形は、てすりの形を表している。てすりの形を手がかりに、白いベンチがある場所の文字だけを読もう。</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-button">４つ目の謎の答え</button>
+                    <div class="accordion-inner-content">
+                        <p>答えは「しめくくり」だ。WEBに入力しよう。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+
+                    const parentContent = button.closest('.accordion-content');
+                    if (parentContent) {
+                        parentContent.style.maxHeight = parentContent.scrollHeight + content.scrollHeight + "px";
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
