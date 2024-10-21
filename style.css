@@ -42,9 +42,7 @@ img {
 .section {
     margin: 0;
     padding: 10px 0 30px;
-    /* background-image: url(img/blue.png);
-    background-size: cover;
-    background-repeat: repeat-y; */
+    display: none;
 }
 
 input {
